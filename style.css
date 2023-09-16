@@ -66,3 +66,8 @@ ul.inventory li {
     font-size: 24px;
     margin-top: auto;
 }
+
+.search {
+    margin-right: 50px;
+    margin-left: auto;
+}
