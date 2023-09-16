@@ -6,7 +6,17 @@ function addItem(item)
     const list = document.querySelector(".inventory");
 
     let itemElement = document.createElement("li");
-    itemElement.textContent = `${item["name"]} - ${item["quantity"]}`;
+    let itemName = document.createElement("div");
+    let itemQuantity = document.createElement("div");
+
+    itemName.textContent = item["name"];
+    itemQuantity.textContent = item["quantity"];
+    itemName.classList.add("item-text");
+    itemQuantity.classList.add("item-text");
+
+
+    itemElement.appendChild(itemName);
+    itemElement.appendChild(itemQuantity);
 
     list.appendChild(itemElement);
 }
