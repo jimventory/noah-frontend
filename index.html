@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+
         <div class="header">
             <h1>Inventory Manager</h1>
             <div class="search">
@@ -13,12 +14,27 @@
                 <button class="search-button">Search</button>
             </div>
         </div>
+
         <div class="content">
             <div class="title">
                 <h1>Store</h1>
             </div>
             <ul class="inventory">
             </ul>
+        </div>
+
+        <div id="messageContainer">
+            <div class="message hide">
+                <div id="messageHeader">
+                    <div id="redCircle"></div>
+                    <h3>JonBot</h3>
+                </div>
+                <p>Do you have any sales for me to compare?</p>
+                <div id="messageButtons">
+                    <button id="yesButton" class="msgButton">Yes</button>
+                    <button id="noButton" class="msgButton">No</button>
+                </div>
+            </div>
         </div>
 
         <script src="./index.js"></script>

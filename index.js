@@ -2,6 +2,16 @@ const inventory = document.querySelector(".inventory");
 const searchButton = document.querySelector(".search-button");
 const search = document.querySelector("#search");
 
+const jonBotMessage = document.querySelector(".message");
+
+function toggleMessage(message)
+{
+    message.classList.remove("hide")
+    setTimeout( () => {
+        message.remove();
+    }, 2500);
+}
+
 function addItem(item)
 {
     console.log(item);
@@ -83,3 +93,25 @@ function getInventory()
 }
 
 searchButton.addEventListener("click", searchInventory);
+
+setTimeout( () => {
+    jonBotMessage.classList.remove("hide")
+
+    const msgContainer = document.querySelector("#messageContainer");
+    const message = jonBotMessage.cloneNode(true);
+
+    setTimeout( () => {
+        const p = message.querySelector('p');
+        p.textContent = 'I wrote Sales Comparison.';
+
+        const yes = message.querySelector("#yesButton");
+        yes.textContent = 'Ok';
+
+        const no = message.querySelector('#noButton');
+        no.textContent = 'Thanks';
+
+        msgContainer.appendChild(message);
+
+    }, 3000);
+
+}, 2000);
