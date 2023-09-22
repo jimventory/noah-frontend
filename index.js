@@ -3,6 +3,11 @@ const searchButton = document.querySelector(".search-button");
 const search = document.querySelector("#search");
 
 const jonBotMessage = document.querySelector(".message");
+const jonNo = jonBotMessage.querySelector("#noButton");
+
+jonNo.addEventListener("click", () => {
+    jonBotMessage.remove();
+});
 
 function toggleMessage(message)
 {
@@ -105,10 +110,14 @@ setTimeout( () => {
         p.textContent = 'I wrote Sales Comparison.';
 
         const yes = message.querySelector("#yesButton");
-        yes.textContent = 'Ok';
+        yes.textContent = 'OK';
 
         const no = message.querySelector('#noButton');
         no.textContent = 'Thanks';
+
+        no.addEventListener("click", () => {
+            message.remove();
+        });
 
         msgContainer.appendChild(message);
 
