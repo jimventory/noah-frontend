@@ -10,15 +10,21 @@ function addItem(item)
     let itemElement = document.createElement("li");
     let itemName = document.createElement("div");
     let itemQuantity = document.createElement("div");
+    let addButton = document.createElement("button");
 
     itemName.textContent = item["name"];
-    itemQuantity.textContent = item["quantity"];
-    itemName.classList.add("item-text");
+    itemName.classList.add("item-title");
+
+    itemQuantity.textContent = `${item["quantity"]} in stock`;
     itemQuantity.classList.add("item-text");
+
+    addButton.textContent = "Add to cart";
+    addButton.classList.add("add-to-cart");
 
 
     itemElement.appendChild(itemName);
     itemElement.appendChild(itemQuantity);
+    itemElement.appendChild(addButton);
 
     list.appendChild(itemElement);
 }
